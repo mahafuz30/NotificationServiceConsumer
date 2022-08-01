@@ -17,15 +17,21 @@ public class SmsRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @Column(nullable = false)
     private Long number;
+
     @Column(nullable = false)
     private String message;
+
     @Enumerated(EnumType.STRING)
     private SmsRequestStatusType smsRequestStatusType;
+
     @Enumerated(EnumType.STRING)
     private SmsFailureCode smsFailureCode;
+
     private String failureMessage;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
